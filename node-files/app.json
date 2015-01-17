@@ -1,0 +1,7 @@
+{
+  "name": "Facebook Popular",
+  "description": "Find out whether you are popular than your friend.",
+  "repository": "https://github.com/heroku/node-app",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"]
+}
