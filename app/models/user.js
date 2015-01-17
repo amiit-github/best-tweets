@@ -20,7 +20,8 @@ UserSchema = mongoose.Schema({
 	},
 	twitter:{
 		id:       String,
-		name:    String
+		name:    String,
+		email: String
 	}
 });
 

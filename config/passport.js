@@ -18,14 +18,15 @@ module.exports = function (passport, config) {
 
 
 
-    passport.use(new TwitterStrategy({
-		 consumerKey: config.twitter.consumerKey,
- consumerSecret: config.twitter.consumerSecret,
- callbackURL: config.twitter.callbackURL
+  passport.use(new TwitterStrategy({
+	  consumerKey: config.twitter.consumerKey,
+    consumerSecret: config.twitter.consumerSecret,
+    callbackURL: config.twitter.callbackURL
     },
     function(accessToken, refreshToken, profile, done) {
     	profile.authOrigin = 'twitter';
     	User.findOrCreateOAuthUser(profile, function (err, user) {
+        console.log(user);
 	      return done(err, user);
 	    });
     }));

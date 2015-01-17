@@ -41,19 +41,12 @@ module.exports = function(app, passport){
 	app.get("/auth/twitter/callback", 
 		passport.authenticate("twitter",{ failureRedirect: '/login'}),
 		function(req,res){
+			console.log("authentication success");
 			res.redirect('/');
 			//res.render("profile", {user : req.user});
 		}
 	);
 
-
-
-	app.get('/auth/google/callback', 
-	  passport.authenticate('google', { failureRedirect: '/login' }),
-	  function(req, res) {
-	    // Successful authentication, redirect home.
-	    res.redirect('/');
-	  });
 
 	app.get("/profile", Auth.isAuthenticated , function(req, res){ 
 		res.render("profile", { user : req.user});
