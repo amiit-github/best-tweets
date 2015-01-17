@@ -4,18 +4,6 @@ module.exports = {
 		app: {
 			name: 'Passport Authentication Tutorial'
 		},
-		facebook: {
-			clientID: "1046246885402027",
-			clientSecret: "f3c7864287a70588c81fc8adc560d7b0",
-			callbackURL: "http://popular-guy.herokuapp.com/auth/facebook/callback"
-			//callbackURL: "http://localhost:5000/auth/facebook/callback"
-		},
-
-		google: {
-			clientID: "{{PLACEHOLDER}}",
-			clientSecret: "{{PLACEHOLDER}}",
-			callbackURL: "{{PLACEHOLDER}}"
-		},
 
 		twitter: {
 			consumerKey: "0SVQQRHVOwA9az7l2s4vnY7oC",
@@ -29,15 +17,12 @@ module.exports = {
 		app: {
 			name: 'Passport Authentication Tutorial'
 		},
-		facebook: {
-			clientID: "",
-			clientSecret: "",
+
+		twitter: {
+			consumerKey: "",
+			consumerSecret: "",
 			callbackURL: ""
-		},
-		google: {
-			clientID: '',
-			clientSecret: '',
-			callbackURL: ''
 		}
+
  	}
 }

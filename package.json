@@ -12,9 +12,7 @@
     "mongodb": "*",
     "nodemon": "*",
     "passport": "*",
-    "passport-local": "*",
-    "passport-facebook": "*",
-    "passport-google-oauth": "*",
+    "passport-twitter": "*",
     "mongoose": "~3.6.4",
     "connect-flash": "*"
   },

@@ -1,7 +1,7 @@
 {
-  "name": "Facebook Popular",
-  "description": "Find out whether you are popular than your friend.",
-  "repository": "https://github.com/heroku/node-app",
+  "name": "Aggregate tweets",
+  "description": "Find out the best tweets out of your timeline, user-profile, search.",
+  "repository": "https://github.com/heroku/aggr-tweets",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"]
 }
