@@ -41,7 +41,8 @@ module.exports = function(app, passport){
 	app.get("/auth/twitter/callback", 
 		passport.authenticate("twitter",{ failureRedirect: '/login'}),
 		function(req,res){
-			res.render("profile", {user : req.user});
+			res.redirect('/');
+			//res.render("profile", {user : req.user});
 		}
 	);
 
