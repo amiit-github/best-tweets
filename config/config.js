@@ -20,8 +20,8 @@ module.exports = {
 		twitter: {
 			consumerKey: "0SVQQRHVOwA9az7l2s4vnY7oC",
 			consumerSecret: "M9elr69SsrD6WoAIc3yIYGw6n9iUrUIAWspWM4Q6rnWmruRg4b",
-			callbackURL: "http://127.0.0.1:3000/auth/twitter/callback",
-			//callbackURL: "http://aggrtweets.herokuapp.com/auth/twitter/callback"
+			//callbackURL: "http://127.0.0.1:3000/auth/twitter/callback",
+			callbackURL: "http://aggr-tweets.herokuapp.com/auth/twitter/callback"
 		}
 	},
   	production: {
