@@ -15,16 +15,16 @@ module.exports = function (passport, config) {
 		});
 	});
 
-
-
-
   passport.use(new TwitterStrategy({
 	  consumerKey: config.twitter.consumerKey,
     consumerSecret: config.twitter.consumerSecret,
     callbackURL: config.twitter.callbackURL
     },
-    function(accessToken, refreshToken, profile, done) {
+    function(accessToken, tokenSecret, profile, done) {
     	profile.authOrigin = 'twitter';
+    	profile.accessToken = accessToken;
+    	profile.tokenSecret = tokenSecret;
+    	
     	User.findOrCreateOAuthUser(profile, function (err, user) {
         console.log(user);
 	      return done(err, user);

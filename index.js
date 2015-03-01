@@ -1,8 +1,6 @@
 /**
  * Module dependencies.
  */
-
-
 var mongoose = require('mongoose')
 var passport = require('passport')
 var TwitterStrategy = require('passport-twitter').Strategy;
@@ -19,7 +17,14 @@ var express = require('express'),
 var env = process.env.NODE_ENV || 'development',
   config = require('./config/config')[env];
 
-mongoose.connect(config.db);
+var uristring = config.db;
+mongoose.connect(uristring, function (err, res) {
+  if (err) {
+  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+  console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 var models_dir = __dirname + '/app/models';
 fs.readdirSync(models_dir).forEach(function (file) {
@@ -74,8 +79,6 @@ app.use(function(req, res, next){
 require('./config/routes')(app, passport);
 
 
-
-
 app.get('/', function(request, response) {
   response.send('Hello World!');
 });
@@ -83,8 +86,3 @@ app.get('/', function(request, response) {
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
-
-
-
-
-
